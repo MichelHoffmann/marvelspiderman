@@ -1,74 +1,233 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 @font-face {
-    font-family: 'SpidermanFont';
-    src: url('fonts/Spider-Man.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "SpidermanFont";
+  src: url("fonts/Spider-Man.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-    width: 100%;
+  width: 100%;
 }
 
 header {
-    height: 75px;
-    padding-inline: 35px;
-    background-color: #D60000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: 'SpidermanFont';
+  height: 70px;
+  padding-inline: 35px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "SpidermanFont";
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
-header h1, header nav a {
-    color: #fff;
+header h1,
+header nav a {
+  color: #d60000;
 }
-    
+
 header h1 {
-    font-weight: 100;
-    font-size: 2.5rem;
+  font-weight: 100;
+  font-size: 2.5rem;
 }
 
-header nav{
-    width: 150px;
+header nav {
+  width: 150px;
 }
 
 header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 header nav ul li {
-    width: 80px;
-    display: flex;
-    justify-content: center;
+  width: 80px;
+  display: flex;
+  justify-content: center;
 }
 
 header nav ul li a {
-    text-decoration: none;
-    font-size: 1.5rem;
-    /* letter-spacing: .07rem; */
+  text-decoration: none;
+  font-size: 1.5rem;
+  /* letter-spacing: .07rem; */
 }
 
 header nav ul li a:hover {
-    animation: treme 0.1s;
-    animation-iteration-count: 2;
-    color: black;
-    transition: 100ms;
-    scale: 1.2;
+  animation: treme 0.1s;
+  animation-iteration-count: 2;
+  color: black;
+  transition: 100ms;
+  scale: 1.2;
 }
 
 @keyframes treme {
-    0% {margin-left: 0;}
-    25% {margin-left: 5px;}
-    50% {margin-left: 0;}
-    75% {margin-left: -5px;}
-    100% {margin-left: 0;}
+  0% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: 5px;
+  }
+  50% {
+    margin-left: 0;
+  }
+  75% {
+    margin-left: -5px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+main {
+  font-family: "Inter", sans-serif;
+}
+
+main #about {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 80px 35px;
+  background-image: linear-gradient(to right, #201f1f 20%, #b9090a);
+}
+
+main #about article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main #about h1,
+main #about h2,
+main #about p {
+  color: #fff;
+  font-weight: 200;
+  text-align: center;
+}
+
+main #about h1 {
+  font-size: 2.5rem;
+}
+
+main #about h2 {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+main #about p {
+  width: 80%;
+}
+
+main #download {
+  padding: 80px 35px;
+  background-color: #201f1f;
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+main #download h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+main #download h2 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  padding-bottom: 40px;
+}
+
+main #download article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+main #download article a img {
+  width: 150px;
+  height: 150px;
+}
+
+main #download article a img:hover {
+  scale: 1.1;
+  transition: 400ms;
+}
+
+main #contact {
+  padding: 80px 35px;
+  background-color: #201f1f;
+  color: #fff;
+  text-align: center;
+}
+
+main #contact form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 7px;
+}
+
+main #contact h1 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+main #contact form input,
+main #contact form textarea,
+main #contact form button {
+  display: block;
+  width: 320px;
+  margin-bottom: 8px;
+  padding: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #4d4d4d;
+  color: #fff;
+  outline: 0;
+  border: none;
+}
+
+main #contact input:focus,
+main #contact textarea:focus {
+  outline: 1px solid #b9090a;
+}
+
+main #contact textarea {
+  height: 130px;
+  resize: none;
+}
+
+main #contact form button {
+  width: 100px;
+  background-color: rgb(42, 129, 42);
+}
+
+footer {
+  height: 30px;
+  background-color: #4d4d4d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
 }
